@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .darkTheme {
+        background-color: black;
+    }
+    
+    </style>
+</head>
+<body>
+  <button
+    type="button"
+    id="dark"
+    onclick="myDarkFunction()"
+    
+    >
+    dark mode
+  </button>
+  
+  
+  <script>
+    // hard-coded toggle script function //
+  function myDarkFunction(){
+    document.body.classList.toggle("darkTheme");
+    let label;
+    if (document.body.classList.contains("darkTheme")) {
+      label = "light mode";
+    } else {
+      label = "dark mode";
+    }
+    document.getElementById("dark").innerText = label;
+  }
+  </script>
+</body>
+</html>
